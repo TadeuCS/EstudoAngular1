@@ -1,0 +1,12 @@
+.title {
+    font-size: large;
+    font-weight: 600;
+}
+
+mat-card{
+    margin: 20px;
+}
+
+mat-form-field{
+    padding: 10px;
+}

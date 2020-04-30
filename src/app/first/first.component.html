@@ -1,0 +1,30 @@
+<mat-card>
+    <mat-card-title>
+        <mat-icon>home</mat-icon>
+        <p class="title">Olá {{user.nome}}</p>
+    </mat-card-title>
+
+    <mat-card-content>
+        <img src="https://www.infomoney.com.br/wp-content/uploads/2019/06/homer-simpson.jpg?fit=900%2C734&quality=75&strip=all"
+                alt="Homer" width="300">
+        <form>
+            <mat-form-field>
+                <mat-label>Nome</mat-label>
+                <input matInput matInput [(ngModel)]="user.nome" name="name">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput matInput [(ngModel)]="user.email" name="email">
+            </mat-form-field>
+            <mat-checkbox [(ngModel)]="user.ativo" name="ativo"></mat-checkbox>
+        </form>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <mat-divider></mat-divider>
+        <app-second userName="Salvar" (click)="addUser()"></app-second>
+        <app-second userName="Limpar" (clear)="clearFirst()" ></app-second>
+    </mat-card-actions>
+</mat-card>
+
+<app-list [list]="users" ></app-list>

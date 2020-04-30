@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-card-title>
+        <h1>Lista</h1>
+        <mat-divider></mat-divider>
+    </mat-card-title>
+    <mat-card-content>
+        <mat-selection-list #shoes>
+            <mat-list-option *ngFor="let user of list">
+                {{user.nome}}
+            </mat-list-option>
+        </mat-selection-list>
+    </mat-card-content>
+    <mat-card-footer>
+        <p>
+           Row Selected: <strong>{{shoes.selectedOptions.selected.length}}</strong>
+        </p>
+    </mat-card-footer>
+</mat-card>
